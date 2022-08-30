@@ -7,14 +7,14 @@ namespace GameProject
     {
         static void Main(string[] args)
         {
-            Gamer gamer1 = new Gamer { Id = 1, FirstName = "Onur", LastName = "Rozet", NationalId = "1111111111", YearOfBirth = new DateTime(1989, 06, 19) } ;
-            Gamer gamer2 = new Gamer {  Id = 2, FirstName = "Derya", LastName = "Rozet", NationalId = "222222222", YearOfBirth = new DateTime(1987, 07, 05) } ;
-            Gamer gamer3 = new Gamer { Id = 3, FirstName = "Furkan", LastName = "Yilmaz", NationalId = "333333333", YearOfBirth = new DateTime(2006, 01, 28) } ;
-            Gamer gamer4 = new Gamer { Id = 4, FirstName = "Kerem", LastName = "Yilmaz", NationalId = "444444444", YearOfBirth = new DateTime(2010, 07, 27) } ;
-            Gamer gamer5 = new Gamer {Id = 5, FirstName = "Mehmet", LastName = "Bayrak", NationalId = "555555555", YearOfBirth = new DateTime(1991, 06, 05) } ;
+            Gamer gamer1 = new Gamer { Id = 1, FirstName = "Onur", LastName = "Rozet", NationalId = "11111111111", YearOfBirth = 1989 } ;
+            Gamer gamer2 = new Gamer {  Id = 2, FirstName = "Derya", LastName = "Rozet", NationalId = "222222222", YearOfBirth = 1987 } ;
+            Gamer gamer3 = new Gamer { Id = 3, FirstName = "Furkan", LastName = "Yilmaz", NationalId = "333333333", YearOfBirth = 2006 } ;
+            Gamer gamer4 = new Gamer { Id = 4, FirstName = "Kerem", LastName = "Yilmaz", NationalId = "444444444", YearOfBirth = 2010 } ;
+            Gamer gamer5 = new Gamer {Id = 5, FirstName = "Mehmet", LastName = "Bayrak", NationalId = "555555555", YearOfBirth = 1991 } ;
 
 
-            GamerManager gamerManager = new GamerManager();
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
             gamerManager.Add(gamer1);
             gamerManager.Add(gamer2);
             gamerManager.Add(gamer3);

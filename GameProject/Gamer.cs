@@ -12,7 +12,7 @@ namespace GameProject
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string NationalId { get; set; }
-        public DateTime YearOfBirth { get; set; }
+        public int YearOfBirth { get; set; }
 
 
 

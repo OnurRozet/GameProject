@@ -8,9 +8,23 @@ namespace GameProject
 {
     internal class GamerManager : IGamerService
     {
+        IUserValidationService _userValidationService;
+
+        public GamerManager(IUserValidationService userValidationService)
+        {
+            _userValidationService = userValidationService;
+        }
         public void Add(Gamer gamer)
         {
-            Console.WriteLine("Added :"  + gamer.FirstName+ " " + gamer.LastName + " " ); 
+            if (_userValidationService.Validate(gamer))
+            {
+
+            Console.WriteLine("Added :"  + gamer.FirstName+ " " + gamer.LastName + " " );
+            }
+            else
+            {
+                Console.WriteLine("Dogrulama basarisiz Kayit olunamadi");
+            }
         }
 
         public void Delete(Gamer gamer)
